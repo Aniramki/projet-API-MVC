@@ -1,0 +1,30 @@
+
+<div class="form-container">
+    <h2>Modifier l'utilisateur</h2>
+    <form (ngSubmit)="submitForm()" #userForm="ngForm">
+  
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input [(ngModel)]="user.name" name="name" placeholder="Prénom" required />
+      </div>
+  
+      <div class="input-group">
+        <i class="fas fa-user-friends"></i>
+        <input [(ngModel)]="user.second_name" name="second_name" placeholder="Nom" required />
+      </div>
+  
+      <div class="input-group">
+        <i class="fas fa-city"></i>
+        <input [(ngModel)]="user.city" name="city" placeholder="Ville" required />
+      </div>
+  
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input [(ngModel)]="user.email" name="email" type="email" placeholder="Email" required />
+      </div>
+  
+      <button class="btn-submit" type="submit">Mettre à jour</button>
+    </form>
+  </div>
+  
+

@@ -1,0 +1,29 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Email</th>
+      <th>Ville</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.second_name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.city }}</td>
+      <td>
+        <button class="edit" (click)="updateUser(user)" title="Modifier">
+          <i class="fa fa-edit" ></i> Modifier
+        </button>
+        <button class="delete" (click)="confirmAndDelete(user)" title="Supprimer">
+          <i class="fa-sharp fa-solid fa-xmark" ></i> Supprimer
+        </button>
+      </td>
+      
+    </tr>
+  </tbody>
+</table>
+
